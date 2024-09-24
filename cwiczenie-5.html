@@ -28,7 +28,7 @@
 
 			wynik.innerHTML = "";
 
-			if(x >= 0){
+			if(x >= 0 || Number.isInteger(x)){
 				for(var i = 1 ; i <= x ; i++){
 					wynik.innerHTML += kolumna(i);
 				}
