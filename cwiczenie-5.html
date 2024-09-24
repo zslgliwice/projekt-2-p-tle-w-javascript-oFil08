@@ -23,7 +23,29 @@
 	
 		function generuj()
 		{
-			
+			x = document.getElementById("x").value;
+			wynik = document.getElementById("wynik");
+
+			wynik.innerHTML = "";
+
+			if(x >= 0){
+				for(var i = 1 ; i <= x ; i++){
+					wynik.innerHTML += kolumna(i);
+				}
+			}
+			else{
+				wynik.innerHTML = "Paaanie! Z takim x to my daleko nie zajedziemy!"
+			}
+		}
+
+		function kolumna(x){
+			var w=1;
+			var pom = 1;
+			for(var i = 2 ; i <= x ; i++){
+				w+=i;
+				pom+=" + " + i;
+			}
+			return pom+" = "+w+"<br>";
 		}
 
 	</script>

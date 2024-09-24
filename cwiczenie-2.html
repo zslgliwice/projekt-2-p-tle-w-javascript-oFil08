@@ -23,7 +23,28 @@
 	
 		function generuj()
 		{
-			
+			var x = document.getElementById("x").value;
+			var wynik = document.getElementById("wynik");
+
+			if(isNaN(x)){
+				wynik.innerHTML = "Podane x nie jest liczbą!";
+			}
+			else if(x<0){
+				wynik.innerHTML = "Podane x jest ujemne!";
+			}
+			else if(x == 0){
+				wynik.innerHTML = "Podane x jest równe zero!"
+			}
+			else{
+				var parzyste = "Parzyste:";
+				var nieparzyste = "Nieparzyste:";
+
+				for(var i = 1 ; i <= x ; i++){
+					if(i % 2 == 0) parzyste += " " + i;
+					else nieparzyste += " " + i;
+				}
+				wynik.innerHTML = parzyste+" "+nieparzyste;
+			}
 		}
 
 	</script>

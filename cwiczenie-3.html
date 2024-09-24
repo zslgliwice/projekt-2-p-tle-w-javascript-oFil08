@@ -30,7 +30,21 @@
 	
 		function przemowa()
 		{
-			
+			var postac = document.getElementById("postac").value;
+			var ile = document.getElementById("ile").value;
+			var wynik = document.getElementById("wynik");
+
+			if(isNaN(ile) || ile<=0){
+				wynik.innerHTML = "Jeśli nie chcesz mojej zguby, krokodyla daj mi, luby";
+			}
+			else{
+				wynik.innerHTML = "";
+				var przemowa = (postac=="r" ? "Niech się dzieje wola nieba!" : "Mocium panie!");
+
+				for(var i = 0 ; i < ile ; i++){
+					wynik.innerHTML += przemowa+"<br>";
+				}
+			}
 		}
 
 	</script>
